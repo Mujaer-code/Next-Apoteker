@@ -1,0 +1,15 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="1920" height="1080" fill="white"/>
+<rect width="1920" height="1080" fill="url(#pattern0_58_1647)"/>
+<rect width="1920" height="1080" fill="url(#paint0_radial_58_1647)"/>
+<defs>
+<radialGradient id="paint0_radial_58_1647" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 430.5) rotate(90) scale(668.5 1413.88)">
+<stop stop-color="#F6F6F4" stop-opacity="0.3"/>
+<stop offset="1" stop-color="#F6F6F4"/>
+</radialGradient>
+<pattern id="pattern0_58_1647" patternUnits="userSpaceOnUse" patternTransform="matrix(192 0 0 130 0 0)" preserveAspectRatio="none" viewBox="0 0 192 130" width="1" height="1">
+<g id="pattern0_58_1647_inner">
+<rect x="0.5" y="0.5" width="191" height="129" stroke="#004838" stroke-opacity="0.27"/>
+</g>
+</pattern></defs>
+</svg>

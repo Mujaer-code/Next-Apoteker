@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="css/tryout.css">
+	<link rel="icon" type="image/x-icon" href="resources/logo.png">
+	
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="header">
+		<div class="logo-container">
+			<div class="logo" onclick = "window.location.href='index.html'"></div>
+			<div class="name-logo">NEXT Apoteker</div>
+		</div>
+
+		<div class="status">
+			<div class="answered">Answered</div>
+			<div class="marked">Marked</div>
+			<div class="skipped">Skipped</div>
+
+		</div>
+
+		<div class="box-countdown"><i class="fa-regular fa-clock" style="color: #EB2831;"></i>
+		<div class="countdown">00:00:00</div></div>
+	</div>
+
+	<div class="submit-allert">
+
+		<div class="box-submit-allert">
+			<i class="fa-solid fa-x fa-lg" style="position: absolute; top: 0; right: 0; margin: 25px; cursor: pointer;" onclick="closesubmitAllert()"></i>
+			<i class="fa-solid fa-circle-exclamation fa-10x fa-beat-fade" style="color:#F35353"></i>
+		<h2>Selesai Ujian?</h2>
+		<p>Pastikan semua soal sudah terjawab dengan benar!</p>
+		<button class="submit-exam" onclick="showResults()">Submit</button>
+		</div>
+	</div>
+
+	<div class="box-result">
+		<div class="text-review">Hasil Ujian</div>
+
+		<div class="score-display">
+			<div class="score-exam">
+                <h2>Your Score</h2>
+				<div class="progress-wrapper">
+				    <svg width="200" height="200" viewBox="0 0 200 200">
+				        <circle class="bg" cx="100" cy="100" r="80" />
+				        <circle class="meter" cx="100" cy="100" r="80" />
+				    </svg>
+				    <div class="percentage" id="score-text">4</div>
+				</div>
+
+				<div class="jumlahBenar">Benar <strong id="correct-stat">0</strong> dari <span id="total-stat">0</span> </div>
+
+      </div>
+
+      <div class="categories-score">
+      	<div id="category-detail"></div>
+      </div>
+
+                <div style="width: 600px; margin: 20px;">
+    								<canvas id="myRadarChart"></canvas>
+								</div>
+		</div>
+
+		
+		<div class="text-review">Review Soal</div>
+
+		<div class="review-box">
+
+			<div class="quiz-result">
+
+				<div class="correct-mark">	<i class="fa-regular fa-circle-check fa-xl" style="position: absolute; right:0; margin: 10px; color:#8ee1a1;"></i></div>
+			
+			<div class="nomor-soal"> <span class="current-number">1</span></div>
+			
+
+			<div class="question-text-result">
+			<p>seorang pasien</p>
+			
+    	</div>
+
+    	<div class="option-list-result">
+		<div class="option" data-index="0">
+			<span>A. apa</span>
+		</div>
+
+		<div class="option" data-index="1"> 
+			<span>B. apa</span>
+		</div>
+
+		<div class="option" data-index="2">
+			<span>C. apa</span>
+		</div>
+
+		<div class="option" data-index="3">
+			<span>D. apa</span>
+		</div>
+
+		<div class="option" data-index="4">
+			<span>E. apa</span>
+		</div>
+	</div>
+
+			<div class="expla-box">
+				<h2>Pembahasan</h2>
+				<div class="explanation-text">asww</div>
+				<div class="explanation-img"></div>
+			</div>
+
+			</div>
+
+
+		<div class="quiz-navigation-result" id="nav-grid">
+						<p>Navigation</p>
+			<div class="line"></div>
+			<div class="grid-container-result" id="grid-result">
+				<div class="grid-item-result"></div>
+			</div>
+			
+		</div>
+
+		</div>
+
+
+			</div>
+
+		
+
+
+	<div class="quiz-container">
+		<div class="quiz-area">
+			<div class="nomor-soal"> <span class="current-number">1</span></div>
+			
+			<div class="question-text">
+			<p>seorang pasien</p>
+
+    	</div>
+
+    	<div class="option-list">
+		<div class="option" data-index="0">
+			<span>A. apa</span>
+		</div>
+
+		<div class="option" data-index="1"> 
+			<span>B. apa</span>
+		</div>
+
+		<div class="option" data-index="2">
+			<span>C. apa</span>
+		</div>
+
+		<div class="option" data-index="3">
+			<span>D. apa</span>
+		</div>
+
+		<div class="option" data-index="4">
+			<span>E. apa</span>
+		</div>
+	</div>
+
+	<div class="tombol">
+	<button class="previous"><i class="fa-solid fa-angle-left fa-xl"></i> Previous</button>
+	<button class="doubt-btn" onclick="toggleDoubt()"><span class="icon-box"></span>Tandai</button>
+	<button class="next">Next <i class="fa-solid fa-angle-right fa-xl"></i></button>
+	</div>
+
+		</div>
+
+<div class="side-bar">
+		<button class="calc-button"><i class="fa-solid fa-calculator" style="margin-right: 5px;"></i>Show Calculator</button>
+
+		<div class="calc-area">
+			<div class="calculator">
+			  <div class="display-calc">
+			    <div id="history">0</div>
+			    <div id="result">0</div>
+			  </div>
+			  <div class="calc-btn">
+			    <button class="op-top" onclick="clearDisplay()">C</button>
+			    <button class="op-top"onclick="appendOperator('x²')">x²</button>
+			    <button class="op-top" onclick="appendOperator('√')">√</button>
+			    <button class="op-side" onclick="appendOperator('/')">÷</button>
+			    
+			    
+			    <button onclick="appendNumber('7')">7</button>
+			    <button onclick="appendNumber('8')">8</button>
+			    <button onclick="appendNumber('9')">9</button>
+			     <button class="op-side" onclick="appendOperator('*')">×</button>
+			    
+
+			     <button onclick="appendNumber('4')">4</button>
+			    <button onclick="appendNumber('5')">5</button>
+			    <button onclick="appendNumber('6')">6</button>
+			     <button class="op-side" onclick="appendOperator('-')">-</button>
+			   
+
+			    <button onclick="appendNumber('1')">1</button>
+			    <button onclick="appendNumber('2')">2</button>
+			    <button onclick="appendNumber('3')">3</button>
+			    <button class="op-side" onclick="appendOperator('+')">+</button>
+			   
+			    <button onclick="toggleSign()">+/-</button>
+			    <button onclick="appendNumber('0')">0</button>
+			    <button onclick="appendNumber('.')">.</button>
+			    <button class="equal" onclick="calculate()">=</button>
+			  </div>
+			</div>
+		</div>
+
+		<div class="quiz-navigation" id="nav-grid">
+						<p>Navigation</p>
+			<div class="line"></div>
+			<div class="grid-container" id="grid">
+				<div class="grid-item"></div>
+			</div>
+			<button class="submit" onclick="submitExam()">Submit</button>
+			
+		</div>
+	</div>
+</div>
+<!-- CHART JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<script src="question/question1.js"></script>
+<script src="javascript/tryout.js"></script>
+<script src="https://kit.fontawesome.com/5a44f7470c.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</body>
+</html>

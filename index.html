@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>	</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/landing-page.css">
+	<link rel="icon" type="image/x-icon" href="resources/logo.png">
+
+</head>
+<body>
+	<header class="header">
+		<div class="logo-container">
+			<div class="logo"></div>
+			<div class="name-logo">NEXT Apoteker</div>
+		</div>
+		<button class="login" onclick="loginContainer()">Login</button>
+	</header>
+
+	<div class="login-opacity" >
+		<div class="login-box">
+			<i class="fa-solid fa-x fa-lg" style="position: absolute; top: 0; right: 0; margin: 25px; cursor: pointer;" onclick="closeLogin()"></i>
+			<div class="logo-box"></div>
+			<h2>Selamat Datang Pejuang!</h2>
+			<form id="loginForm" style="width: 100%;">
+			<div class="username-container">
+		      <label for="username"><b>Username</b></label>
+		      <input type="text" placeholder="Enter Username" id="username"name="uname" required> <span class="toggle-icon" onclick="togglePassword()"><i class="fa-solid fa-eye"></i></span>
+		  	</div>
+
+			<div class="password-container">
+		      <label for="password"><b>Password</b></label>
+		      <input type="password" placeholder="Enter Password" id="password" name="psw" required>
+		  </div>
+
+		  <button type="submit" class="submit">Login</button>
+		  </form>
+
+		</div>
+	</div>
+
+<main class="main">
+	<div class="tagline">Bantu kamu untuk<br>mewujudkan impian apotekermu</div>
+	<div class='description'>Dengan bergabung dengan kami, kamu bisa mendapatkan akses soal dengan tingkat kesulitan lewel dewa</div>
+
+	<div class="button-tagline">
+		<button class="register">Register Now!</button>
+		<button class="learn-more">Learn More</button>
+	</div>
+	
+
+</main>
+
+	
+
+<script src="javascript/landing-page.js"></script>
+<script src="https://kit.fontawesome.com/5a44f7470c.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
