@@ -2,6 +2,7 @@ const loginBox = document.querySelector('.login-box');
 const loginOpacity = document.querySelector('.login-opacity');
 const bodyLanding = document.querySelector('body');
 
+
 function loginContainer() {
   bodyLanding.classList.add('login-body');
   openLogin();
@@ -45,7 +46,10 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            window.location.href = "dashboard.html"; 
+            const now = new Date().getTime();
+            localStorage.setItem('loginTime', now);
+            localStorage.setItem('isLoggedIn', 'true');
+            window.location.href = "dashboard.html";
         } else {
             alert('Gagal: ' + data.message);
             btn.innerText = "Login";
@@ -104,3 +108,5 @@ function initFAQ() {
 }
 
 initFAQ();
+
+

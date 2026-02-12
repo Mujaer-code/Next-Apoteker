@@ -100,6 +100,10 @@ body {
 	margin-right: 10px;
 }
 
+.logout {
+	cursor: pointer;
+}
+
 .logout a {
 	text-decoration: none;
 	color: #7D787E;
