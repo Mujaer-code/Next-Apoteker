@@ -4,15 +4,17 @@ body {
 	min-height: 100dvh;
 	min-height: 100vh;
 	background: #f8f8f7;
+	color: #03193C;
 }
 
 button {
 	border: 0;
+	font-family: "SN Pro", sans-serif;
 }
 
 .main {
-	height: 100vh;
-	height: 100dvh;
+	height: calc(100vh - 60px);
+	height: calc(100dvh - 60px);
 	display: flex;
 	justify-content: center;
 	background-image: url(../resources/bg.svg);
@@ -22,6 +24,7 @@ button {
 }
 
 .header {
+	position: sticky;
 	display: flex;
 	justify-content: space-between;
 	padding: 20px 30px;
@@ -102,6 +105,7 @@ button {
 	width: 140px;
 	height: 40px;
 	font-size: 15px;
+	cursor: pointer;
 }
 
 .login-opacity {
@@ -198,3 +202,196 @@ button {
     top: 70%;
     cursor: pointer;
   }
+
+.features {
+	box-sizing: border-box;
+    padding: 80px 10%;
+    text-align: center;
+    background: #03193C;
+    min-height: 100vh;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border: 1px solid #03193C;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    color: #03193C;
+    font-weight: 800;
+}
+
+.card p {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.pricing {
+	box-sizing: border-box;
+    padding: 40px 10%;
+    background-color: #f0f4f8;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+.price-box {
+	box-sizing: border-box;
+    background: white;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #03193C;
+    width: 100%;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.price-box ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.price-box ul li {
+    margin-bottom: 10px;
+}
+
+.price-box ul li::before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.buy {
+    width: 100%;
+    background-color: #03193C;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.buy:hover {
+    background: #2a3d5b;
+}
+
+.card i {
+	color: #03193C;
+}
+
+.icon-medal {
+	align-items: center;
+}
+
+
+.FAQ {
+	box-sizing: border-box;
+	height: 100vh;
+    padding: 40px 10%;
+    background-color: #f7f7f5;
+    text-align: center;
+}
+
+.FAQ h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+footer {
+	text-align:center;
+	font-size:12px;
+	color: white;
+	padding:20px 0;
+	background-color: black;
+}
+
+#faq-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.list {
+	    border: 1px solid #919191;
+	    border-radius: 8px;
+}
+.faq-question {
+    width: 100%;
+    padding: 15px 15px;
+    color: #03193c;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.explain-question {
+    padding: 0 15px;
+    background-color: transparent;
+    color: #03193c;
+    overflow: hidden;
+    text-align: left;
+}
+
+.explain-question p {
+    margin-top: 0;
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+}
+
+.faq-question.active i {
+    transform: rotate(180deg);
+}

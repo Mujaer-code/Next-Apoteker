@@ -60,3 +60,47 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     });
 });
 
+function scrollToFeatures() {
+    const element = document.querySelector(".features");
+    element.scrollIntoView({ 
+        behavior: "smooth", 
+        block: "start" 
+    });
+}
+
+
+function initFAQ() {
+    const faqContainer = document.getElementById('faq-list');
+    faqContainer.innerHTML = ''; 
+
+    faqs.forEach((item, index) => {
+        const faqItem = document.createElement('div');
+        faqItem.className = `list`;
+
+        const btn = document.createElement('button');
+        btn.className = 'faq-question';
+        btn.innerHTML = `${item.question} <i class="fa-solid fa-chevron-down"></i>`;
+
+        const panel = document.createElement('div');
+        panel.className = 'explain-question';
+        panel.innerHTML = `<p>${item.answer}</p>`;
+        
+        panel.style.display = "none";
+
+        btn.onclick = () => {
+            btn.classList.toggle("active");
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        };
+
+        faqItem.appendChild(btn);
+        faqItem.appendChild(panel);
+        faqContainer.appendChild(faqItem);
+    });
+}
+
+initFAQ();
