@@ -45,7 +45,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            window.location.href = "tryout.html"; 
+            window.location.href = "dashboard.html"; 
         } else {
             alert('Gagal: ' + data.message);
             btn.innerText = "Login";

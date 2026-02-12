@@ -1,0 +1,193 @@
+body {
+	font-family: "SN Pro", sans-serif;
+	margin: 0;
+	min-height: 100dvh;
+	min-height: 100vh;
+	background: white;
+	color: #03193C;
+	display: flex;
+}
+
+.header {
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 30px;
+	height: 40px;
+	background-color: transparent;
+
+}
+
+.logo {
+	background-image: url('../resources/logo.png');
+	background-size: cover;
+	width: 40px;
+	height: 40px;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.name-logo {
+	font-size: 20px;
+	font-weight: 700;
+	color: #03193C;
+}
+
+
+
+.sidebar {
+	position: sticky;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 260px;
+	height: 100vh;
+	overflow: hidden;
+	transition: all 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-sidebar {
+	display: flex;
+	justify-content: space-between;
+	border-right: 1px solid #E1E1E1;
+	flex-direction: column;
+	height: 90%;
+	padding: 0 1.8rem;
+}
+
+.menu {
+	list-style: none;
+	position: relative;
+	padding: 0;
+}
+
+.menu li {
+	padding: 1rem;
+	margin: 8px 0;
+	border-radius: 8px;
+
+}
+
+.menu li:hover,
+.active {
+	color: #03193C;
+}
+
+
+
+.menu a {
+	text-decoration: none;
+	gap: 10px;
+	display: flex;
+	color: #7D787E;
+	transition: .3s ease-in-out;
+}
+
+.menu a:hover,
+.menu a.active {
+	color: #03193C ;
+	font-weight: 600;
+}
+
+.menu i {
+	margin-right: 10px;
+}
+
+.logout a {
+	text-decoration: none;
+	color: #7D787E;
+	transition: .3s ease-in-out;
+}
+
+.logout a:hover {
+	color: #03193C;
+	font-weight: 600;
+}
+
+.logout i {
+	margin-right: 10px;
+}
+
+.dashboard {
+	padding: 30px;
+}
+
+.greeting h2 {
+	margin: 0;
+}
+
+.greeting p {
+	margin: 0;
+}
+
+.tryout {
+	height: 100vh;
+	width: calc(100% - 260px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.grid-tryout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    background: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Membuat tombol selalu di bawah */
+    min-height: 250px; /* Memberikan tinggi minimal agar tidak terlalu gepeng */
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	background-color: #FE7E51;
+	color: white;
+	font-weight: 800;
+	font-size: 25px;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.start-exam {
+    margin: 20px;
+    padding: 12px;
+    background: #03193C;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-exam:hover {
+    background: #FE7E51;
+}

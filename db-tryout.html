@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="icon" type="image/x-icon" href="resources/logo.png">
+</head>
+<body>
+
+	<section class="sidebar">
+		<div class="content-sidebar">
+		<div class="logo-container">
+				<div class="logo"></div>
+				<div class="name-logo">NEXT Apoteker</div>
+			</div>
+
+		<ul class="menu">
+			
+			<li>
+			<a href="dashboard.html" class="active">
+				<span><i class="fa-solid fa-house fa"></i>Dashboard</span>
+			</a>
+			</li>
+
+			<li>
+			<a href="exercise.html">
+				<span><i class="fa-solid fa-dumbbell fa"></i>Exercise</span>
+			</a>
+			</li>
+
+			<li>
+			<a href="db-tryout.html">
+				<span><i class="fa-solid fa-clipboard fa-lg"></i>Tryout</span>
+			</a>
+			</li>
+
+			
+		</ul>
+
+		<div class="logout">
+			<a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="tryout">
+		<div class="grid-tryout">
+			<div class="card">
+    <div class="title">TRYOUT 1</div>
+    
+    <div class="card-content">
+        <div class="info-item">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>200 Soal</span>
+        </div>
+        <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <span>200 Menit</span>
+        </div>
+       
+    </div>
+
+    <button class="start-exam" onclick="startExam()">Mulai</button>
+</div>
+		</div>
+	</section>
+
+<script src="javascript/dashboard.js"></script>
+<script src="https://kit.fontawesome.com/5a44f7470c.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
